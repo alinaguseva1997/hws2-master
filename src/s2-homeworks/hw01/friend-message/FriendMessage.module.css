@@ -1,0 +1,43 @@
+.friendMessage {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+}
+
+.friendImageAndText {
+    display: flex;
+    max-width: 527px;
+}
+
+.friendImageAndText img {
+    max-width: 48px;
+    margin-right: 10px;
+}
+
+.friendText {
+    background: #F5F7FB;
+    color: black;
+    padding-right: 10px;
+    font-size: 16px;
+}
+
+.friendText:after {
+
+}
+
+.friendName {
+    font-weight: bold;
+    font-size: 18px;
+}
+
+.friendMessageText {
+    padding: 5px 5px 5px 0px;
+}
+
+.friendTime {
+    font-weight: bold;
+    font-size: 10px;
+    margin-left: 10px;
+}

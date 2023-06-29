@@ -8,7 +8,6 @@ type PropsType = {
 
 export const Layout: FC<PropsType> = ({ children }) => {
     const [open, setOpen] = useState(false)
-    console.log(open)
     const handleClose = () => setOpen(false)
     const handleOpen = () => setOpen(true)
 

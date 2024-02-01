@@ -1,3 +1,4 @@
 .loader {
-    /*свг и/или анимация*/
+    background: url('https://loaders.holasvg.com/my-loader.svg') no-repeat;
+    height: 100px;
 }

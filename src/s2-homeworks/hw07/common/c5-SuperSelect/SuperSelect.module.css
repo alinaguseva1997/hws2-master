@@ -3,8 +3,13 @@
 }
 
 .select:focus {
+    /*width: 171px;*/
+    /*height: 36px;*/
+    /*border-radius: 2px;*/
+    /*border: 1px #323232 solid;*/
 }
 
 
 .option:hover {
+
 }

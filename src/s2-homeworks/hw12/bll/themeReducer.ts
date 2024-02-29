@@ -3,15 +3,16 @@ import {ActionType} from "../../hw10/bll/loadingReducer";
 const initState = {
     themeId: 1,
 }
+export type initStateType = typeof initState
 
-export const themeReducer = (state = initState, action: ActionType): {themeId: number} => { // fix any
+export const themeReducer = (state:initStateType = initState, action: ActionType): initStateType => { // fix any
     switch (action.type) {
-        // дописать
-        // case 'SET_THEME_ID' {
-        //     return
-        // }
-        default:
+        case 'SET_THEME_ID': {
+             return {...state, themeId: action.id}
+         }
+        default: {
             return state
+        }
     }
 }
 

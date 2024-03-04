@@ -47,9 +47,13 @@ const HW13 = () => {
                 if (e.response.status === 500) {
                     setImage(error500)
                     setCode('Ошибка 500!')
+                    setText(e.response.data.errorText)
+                    setInfo(e.response.data.info)
                  } else if (e.response.status === 400) {
                     setImage(error400)
                     setCode('Ошибка 400!')
+                    setText(e.response.data.errorText)
+                    setInfo(e.response.data.info)
                 } else if (AxiosError) {
                     console.log(e)
                     setImage(errorUnknown)
@@ -57,8 +61,6 @@ const HW13 = () => {
                     setText(AxiosError.name)
                     setInfo(e.message)
                 }
-                setText(e.response.data.errorText)
-                setInfo(e.response.data.info)
             })
     }
 

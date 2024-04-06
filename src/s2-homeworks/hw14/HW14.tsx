@@ -35,20 +35,22 @@ const HW14 = () => {
         getTechs(value)
             .then((res) => {
                 // делает студент
-
-                // сохранить пришедшие данные
-
-                //
+                setLoading(false)
+                if (res) {
+                    const dataFromServer = res.data.techs
+                    // сохранить пришедшие данные
+                    setTechs(dataFromServer)
+                }
             })
     }
 
     const onChangeText = (value: string) => {
         setFind(value)
         // делает студент
-
         // добавить/заменить значение в квери урла
         // setSearchParams(
-
+        setSearchParams(value)
+        setTechs( find !== '' ? techs.filter(t => t.startsWith(find)) : techs)
         //
     }
 

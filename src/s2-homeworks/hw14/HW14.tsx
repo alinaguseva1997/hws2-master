@@ -46,12 +46,13 @@ const HW14 = () => {
 
     const onChangeText = (value: string) => {
         setFind(value)
+        setSearchParams(value)
         // делает студент
         // добавить/заменить значение в квери урла
-        // setSearchParams(
-        setSearchParams(value)
-        setTechs( find !== '' ? techs.filter(t => t.startsWith(find)) : techs)
-        //
+        setTimeout(() => {
+            sendQuery(find)
+            setTechs(techs.filter(t=> t === find))
+        }, 1500)
     }
 
     useEffect(() => {
